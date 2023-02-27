@@ -1,0 +1,790 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: 'Poppins', sans-serif;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Reset code end */
+
+/* Common Classes */
+
+.container {
+    width: 100%;
+    max-width: 1340px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: #537543;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+}
+
+
+.inner-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bars {
+    width: 15%;
+    display: none;
+}
+
+.visible {
+    transform: translateX(0%)!important;
+}
+
+.visible-content {
+    display: block!important;
+}
+
+.inner-header .list-items ul {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.banner-section {
+    background-color: #74a654;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    height: 50rem;
+}
+
+.banner-section {
+    position: relative;
+}
+
+.banner .right-side img {
+    position: absolute;
+}
+
+.banner .right-side img:first-child {
+    right: 9rem;
+    top: 4rem;
+}
+
+.banner .right-side img:nth-child(2) {
+    right: 24rem;
+    top: 3rem;
+}
+
+.banner .right-side img:nth-child(3) {
+    right: 21rem;
+    top: 12rem;
+    z-index: 1;
+}
+
+.banner .right-side img:nth-child(4) {
+    right: 14rem;
+    top: 17rem;
+}
+
+.banner .right-side img:nth-child(5) {
+    right: 2rem;
+    top: 17rem;
+}
+
+.banner .small-text {
+    font-family: 'Berkshire Swash', cursive;
+    color: #fff;
+    font-size: 53px;
+    text-align: center;
+}
+
+.banner .large-text {
+    font-size: 114px;
+    font-family: 'Berkshire Swash', cursive;
+    color: #fff;
+}
+
+.banner .description {
+    font-size: 25px;
+    color: #fff;
+    line-height: 40px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.banner .left-side {
+    margin-top: -260px;
+}
+
+.banner button {
+    font-weight: 500;
+    font-size: 28px;
+    color: #3e5831;
+    background: #e6ca48;
+    border: none;
+    border-radius: 43px;
+    padding: 10px 60px 10px 60px;
+    cursor: pointer;
+}
+
+.about-food-section {
+    background-color: #7baf58;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 10px 5px #40da5e00, 0px -10px 5px #40da5e00;
+}
+
+.about-food {
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.about-food .heading {
+    font-family: 'Berkshire Swash', cursive;
+    color: #537543;
+    font-size: 60px;
+}
+
+.about-food .sub-title {
+    font-size: 29px;
+    color: #537543;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.about-food .description {
+    font-size: 25px;
+    color: #5a7d48;
+    margin-bottom: 20px;
+    line-height: 30px;
+}
+
+.read-more {
+    font-size: 28px;
+    color: #3e5831;
+    font-weight: 500;
+    background-color: #fff;
+    border: none;
+    border-radius: 43px;
+    padding: 10px 60px 10px 60px;
+    cursor: pointer;
+}
+
+.about-food-section .background {
+    background-color: #e6ca48;
+    height: 34rem;
+    width: 62.9rem;
+    position: absolute;
+    left: 32rem;
+    top: 9rem;
+    z-index: -1;
+}
+
+.review-section {
+    background-color: #537543;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    box-shadow: 0 4px 6px -6px #40da5e00;
+}
+
+.review .title {
+    font-size: 33px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 55px;
+    margin-bottom: 40px;
+}
+
+.review .description {
+    font-size: 21px;
+    color: #fff;
+    line-height: 30px;
+}
+
+.chef-section {
+    background-color: #75a555;
+}
+
+.inner-chef {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    gap: 100px;
+    color: #fff;
+
+}
+
+.chef-card-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.chef-section .card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    width: 400px;
+    height: 620px;
+    background-color: #537543;
+}
+
+.chef-section .card img {
+    width: 400px;
+    margin: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 500px;
+}
+
+.chef-section .card .name {
+    padding-top: 30px;
+    font-size: 25px;
+}
+
+.chef-section .card .role {
+    padding-top: 2px;
+    font-size: 17px;
+}
+
+.chef-section .description {
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.chef-section .title {
+    font-size: 72px;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.chef-section .sub-title {
+    font-size: 23px;
+    padding-top: 25px;
+
+}
+
+.food-section {
+    background-color: #dd982c;
+}
+
+.inner-food  {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #fff;
+}
+
+.inner-food .left-side img {
+    width: 580px;
+    height: 430px;
+    border-radius: 50px;
+}
+
+.inner-food .right-side .heading {
+    font-weight: 500;
+    font-size: 37px;
+}
+
+.inner-food .right-side .description {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    line-height: 27px;
+    font-size: 21px;
+}
+
+.testimonial-section {
+    background-color: #557844;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #fff;
+}
+
+.testimonial .title {
+    font-size: 98px;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.testimonial .description {
+    font-size: 29px;
+    line-height: 30px;
+}
+
+.testimonial .sub-title {
+    font-weight: 300;
+    font-size: 29px;
+}
+
+.swiper-pagination-bullet {
+    width: 15px!important;
+    height: 15px!important;
+    background: #fff!important;
+}
+
+.inner-menu .top-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.inner-menu .background-color-upper {
+    background-color: #e6ca48;
+}
+
+.inner-menu .background-color-lower {
+    background-color: #7cb258;
+}
+
+.inner-menu .top-side .title {
+    color: #537942;
+    font-size: 97px;
+    font-weight: 600;
+}
+
+.inner-menu .top-side .sub-title {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #537942;
+    font-size: 40px;
+}
+
+.inner-menu .top-side .description {
+    font-size: 17px;
+    color: #537942;
+    line-height: 25px;
+}
+
+.inner-menu .food-items {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    color: #fff;
+}
+
+.inner-menu .food-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.inner-menu .bottom-side {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.inner-menu .food-holder {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.inner-menu  .menu-name {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.inner-menu  .menu-price {
+    font-size: 58px;
+    margin-top: 10px;
+}
+
+.inner-menu  .menu-description {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+footer {
+    background-color: #537942;
+}
+
+.inner-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    color: #fff;
+}
+
+.inner-footer .content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inner-footer .content .heading {
+    font-size: 42px;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.inner-footer .content .description {
+    font-size: 25px;
+    line-height: 35px;
+}
+
+.inner-footer .content .social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.inner-footer .common .title {
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 42px;
+    padding-bottom: 20px;
+}
+
+.inner-footer .common ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.inner-footer .common ul li {
+    font-size: 25px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    position: fixed;
+    z-index: 4;
+    display: none;
+  }
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (max-width: 1400px) {
+    .container {
+        max-width: 1130px;
+    }
+
+    .about-food-section .background {
+        width: 50rem;
+        left: 30rem;
+    }
+
+    .chef-section .card img,
+    .chef-section .card {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .about-food-section .background {
+        width: 45rem;
+        left: 29rem;
+    }
+
+    .chef-section .description {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .container {
+        max-width: 730px;
+    }
+
+    .inner-header .list-items ul {
+        gap: 20px;
+    }
+
+    .about-food .description {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .chef-card-holder {
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    .chef-section .card img, .chef-section .card {
+        width: 600px;
+    }
+
+    .chef-section .card img {
+        object-fit: cover;
+    }
+
+    .about-food-section .background {
+        display: none;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding-top: 285px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .banner .right-side {
+        display: none;
+    }
+
+    .chef-section .description {
+        font-size: 18px;
+    }
+
+    .testimonial .description {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .inner-menu .top-side .description {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .inner-footer,
+    .inner-food,
+    .about-food,
+    .review {
+        flex-direction: column;
+        text-align: center;
+        gap: 100PX;
+    }
+
+    .inner-footer .content .social-icons {
+        justify-content: center;
+    }
+
+    .inner-menu .food-items {
+        flex-direction: column;
+    }
+
+    
+    .bars {
+        display: block;
+    }
+
+    .inner-header .list-items ul {
+        position: fixed;
+        width: 250px;
+        height: 100vh;
+        gap: 65px;
+        padding-top: 100px;
+        flex-direction: column;
+        right: 0;
+        z-index: 5;
+        top: 0;
+        transform: translateX(100%);
+        background-color: #537543;
+        box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, 
+        rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px,
+        rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+        transition: all 0.3s linear;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .container {
+        max-width: 550px;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .container {
+        max-width: 450px;
+    }
+
+    .about-food-section .left-side img {
+        width: 50%;
+        margin: auto;
+    }
+
+    .chef-section .card img, 
+    .chef-section .card,
+    .inner-food .left-side img {
+        width: 100%;
+    }
+
+    .chef-section .description {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .banner .small-text {
+        font-size: 40px;
+    }
+
+    .banner .large-text {
+        font-size: 100px;
+    }
+
+    .banner .description {
+        font-size: 20px;
+    }
+
+    .banner {
+        padding-top: 0;
+    }
+
+    .inner-menu .top-side .title {
+        font-size: 60px;
+    }
+
+    .inner-menu .top-side .sub-title {
+        font-size: 30px;
+    }
+
+    .inner-footer .content .description {
+        font-size: 22px;
+    }
+
+    .swiper-pagination {
+        display: none;
+    }
+
+    .inner-menu .food-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .chef-section .card img {
+        width: 100%;
+    }
+ 
+    .chef-section .card, 
+    .inner-food .left-side img {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .testimonial .title {
+        font-size: 50px;
+    }
+
+    .banner .small-text {
+        font-size: 30px;
+    }
+
+    .banner .large-text {
+        font-size: 60px;
+    }
+
+    .banner .description {
+        font-size: 16px;
+    }
+
+    .about-food .heading {
+        font-size: 45px;
+    }
+
+    .about-food .sub-title {
+        font-size: 20px;
+    }
+
+    .review .description {
+        font-size: 16px;
+    }
+
+    .chef-section .title {
+        font-size: 45px;
+    }
+
+    .chef-section .description {
+        font-size: 13px;
+    }
+
+    .inner-food .right-side .heading {
+        font-size: 25px;
+    }
+
+    .inner-food .right-side .description {
+        font-size: 15px;
+    }
+
+    .testimonial .description {
+        font-size: 16px;
+    }
+
+    .inner-footer .content .description {
+        font-size: 17px;
+    }
+     
+}
